@@ -19,7 +19,7 @@ const main = () => {
 
   const product = new Product('1234', 'Alexa Echo dot 5', 400)
 
-  const orderItem = new OrderItem('12345', '1234', 1)
+  const orderItem = new OrderItem('12345', product.id, 1, 4)
   const order = new Order('10000', customer.id, [orderItem])
 
   console.log(order)
