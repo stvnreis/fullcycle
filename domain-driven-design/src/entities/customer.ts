@@ -1,12 +1,17 @@
-import { Address } from "./value-objects/address"
-import { CPF } from "./value-objects/cpf"
+import { Address } from './value-objects/address'
+import { CPF } from './value-objects/cpf'
 
 export class Customer {
   private _isActive: boolean = true
   private _cpf: CPF
   private _address: Address
 
-  constructor(private _id: string, private _name: string, cpf: CPF, address: Address) {
+  constructor(
+    private _id: string,
+    private _name: string,
+    cpf: CPF,
+    address: Address,
+  ) {
     this._cpf = cpf
     this._address = address
 
@@ -56,10 +61,8 @@ export class Customer {
   }
 
   validate() {
-    if (!this._id.length) 
-      throw new Error('Id must not be empty')
-    
-    if (!this._name.length) 
-      throw new Error('Name must not be empty')
+    if (!this._id.length) throw new Error('Id must not be empty')
+
+    if (!this._name.length) throw new Error('Name must not be empty')
   }
 }

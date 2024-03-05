@@ -1,5 +1,9 @@
 export class Product {
-  constructor(private _id: string, private _name: string, private _value: number) {
+  constructor(
+    private _id: string,
+    private _name: string,
+    private _value: number,
+  ) {
     this.validate()
   }
 

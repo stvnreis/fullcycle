@@ -1,5 +1,10 @@
 export class OrderItem {
-  constructor(private _id: string, private _productId: string, private _unitaryValue: number, private _quantity: number) { }
+  constructor(
+    private _id: string,
+    private _productId: string,
+    private _unitaryValue: number,
+    private _quantity: number,
+  ) {}
 
   get id() {
     return this._id
@@ -14,6 +19,6 @@ export class OrderItem {
   }
 
   get totalValue(): number {
-    return this._quantity  * this._unitaryValue
+    return this._quantity * this._unitaryValue
   }
 }
