@@ -1,7 +1,7 @@
-import { Customer } from 'src/entities/customer'
-import { Order } from 'src/entities/order'
-import { OrderItem } from 'src/entities/order-item'
-import { Product } from 'src/entities/product'
+import { Customer } from 'src/domain/entities/customer'
+import { Order } from 'src/domain/entities/order'
+import { OrderItem } from 'src/domain/entities/order-item'
+import { Product } from 'src/domain/entities/product'
 import { randomUUID } from 'node:crypto'
 
 export type placeOrderItem = {

@@ -1,4 +1,4 @@
-import { makeProduct } from 'src/factory/make-product'
+import { makeProduct } from 'src/domain/factory/make-product'
 
 describe('Product: unit', () => {
   it('should not be able to craete a product without an id', () => {

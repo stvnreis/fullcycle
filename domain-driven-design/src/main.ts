@@ -1,9 +1,9 @@
-import { Customer } from './entities/customer'
-import { Order } from './entities/order'
-import { OrderItem } from './entities/order-item'
-import { Product } from './entities/product'
-import { Address } from './entities/value-objects/address'
-import { CPF } from './entities/value-objects/cpf'
+import { Customer } from './domain/entities/customer'
+import { Order } from './domain/entities/order'
+import { OrderItem } from './domain/entities/order-item'
+import { Product } from './domain/entities/product'
+import { Address } from './domain/entities/value-objects/address'
+import { CPF } from './domain/entities/value-objects/cpf'
 
 const main = () => {
   const cpf = new CPF('12345678910')

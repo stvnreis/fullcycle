@@ -1,5 +1,5 @@
-import { Product } from 'src/entities/product'
-import { makeProduct } from 'src/factory/make-product'
+import { Product } from 'src/domain/entities/product'
+import { makeProduct } from 'src/domain/factory/make-product'
 import { DomainProductService, ProductService } from './product.service'
 
 describe('unit: Product Service', () => {

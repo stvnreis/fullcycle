@@ -1,5 +1,5 @@
-import { Order } from 'src/entities/order'
-import { OrderItem } from 'src/entities/order-item'
+import { Order } from 'src/domain/entities/order'
+import { OrderItem } from 'src/domain/entities/order-item'
 
 interface makeOrderProps {
   id: string

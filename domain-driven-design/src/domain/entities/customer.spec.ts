@@ -1,4 +1,4 @@
-import { makeCustomer } from 'src/factory/make-customer'
+import { makeCustomer } from 'src/domain/factory/make-customer'
 import { Address } from './value-objects/address'
 
 describe('unit: Customer', () => {

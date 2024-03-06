@@ -1,9 +1,9 @@
-import { Order } from 'src/entities/order'
+import { Order } from 'src/domain/entities/order'
 import { DomainOrderService, OrderService } from './order.service'
-import { makeOrder } from 'src/factory/make-order'
-import { OrderItem } from 'src/entities/order-item'
-import { makeCustomer } from 'src/factory/make-customer'
-import { makeProduct } from 'src/factory/make-product'
+import { makeOrder } from 'src/domain/factory/make-order'
+import { OrderItem } from 'src/domain/entities/order-item'
+import { makeCustomer } from 'src/domain/factory/make-customer'
+import { makeProduct } from 'src/domain/factory/make-product'
 
 describe('unit: Order Service', () => {
   let orderService: OrderService

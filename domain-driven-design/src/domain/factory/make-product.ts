@@ -1,4 +1,4 @@
-import { Product } from 'src/entities/product'
+import { Product } from 'src/domain/entities/product'
 
 export interface makeProductProps {
   id: string

@@ -1,4 +1,4 @@
-import { makeOrder } from 'src/factory/make-order'
+import { makeOrder } from 'src/domain/factory/make-order'
 import { OrderItem } from './order-item'
 
 describe('Order: unit', () => {

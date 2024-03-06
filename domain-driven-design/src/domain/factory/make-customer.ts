@@ -1,6 +1,6 @@
-import { Customer } from 'src/entities/customer'
-import { Address } from 'src/entities/value-objects/address'
-import { CPF } from 'src/entities/value-objects/cpf'
+import { Customer } from 'src/domain/entities/customer'
+import { Address } from 'src/domain/entities/value-objects/address'
+import { CPF } from 'src/domain/entities/value-objects/cpf'
 
 export interface makeCustomerProps {
   id: string
