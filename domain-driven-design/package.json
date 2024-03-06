@@ -12,6 +12,7 @@
   },
   "scripts": {
     "main": "rm -rf ./dist && npx tsc && node dist/src/main.js",
-    "test": "vitest run"
+    "test": "npm run tsc --noEmit && vitest run",
+    "tsc": "tsc"
   }
 }

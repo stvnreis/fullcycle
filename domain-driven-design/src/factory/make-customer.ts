@@ -7,6 +7,7 @@ export interface makeCustomerProps {
   name: string
   address: Address
   cpf: CPF
+  rewardPoints?: number
 }
 
 export const makeCustomer = (override: Partial<makeCustomerProps> = {}) => {
@@ -16,5 +17,6 @@ export const makeCustomer = (override: Partial<makeCustomerProps> = {}) => {
     override.cpf ?? new CPF('12345678910'),
     override.address ??
       new Address('country-1', 'state-1', 'city-1', 'street-1', 1, '00000000'),
+    override.rewardPoints ?? 100,
   )
 }

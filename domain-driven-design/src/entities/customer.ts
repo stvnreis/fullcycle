@@ -5,15 +5,18 @@ export class Customer {
   private _isActive: boolean = true
   private _cpf: CPF
   private _address: Address
+  private _rewardPoints: number
 
   constructor(
     private _id: string,
     private _name: string,
     cpf: CPF,
     address: Address,
+    _rewardPoints?: number,
   ) {
     this._cpf = cpf
     this._address = address
+    this._rewardPoints = _rewardPoints ?? 0
 
     this.validate()
   }
@@ -48,6 +51,10 @@ export class Customer {
     return this._cpf
   }
 
+  get rewardPoints(): number {
+    return this._rewardPoints
+  }
+
   changeAddress(address: Address): void {
     this._address = address
   }
@@ -58,6 +65,10 @@ export class Customer {
 
   deactivate(): void {
     this._isActive = false
+  }
+
+  addRewardPoints(points: number): void {
+    this._rewardPoints += points
   }
 
   validate() {

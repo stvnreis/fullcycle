@@ -64,4 +64,15 @@ describe('unit: Customer', () => {
     // Assert
     expect(consumer.address).toMatchObject(newAddress)
   })
+
+  it('should add reward points', () => {
+    const rewardPoints = 200
+    const customer = makeCustomer({ rewardPoints })
+
+    expect(customer.rewardPoints).toBe(200)
+
+    customer.addRewardPoints(10)
+
+    expect(customer.rewardPoints).toBe(rewardPoints + 10)
+  })
 })
