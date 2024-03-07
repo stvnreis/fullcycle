@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@rocketseat/eslint-config": "^2.2.2",
     "@swc/cli": "^0.3.10",
     "@swc/core": "^1.4.2",
@@ -13,9 +14,12 @@
   },
   "scripts": {
     "main": "rm -rf ./dist && npx tsc && node dist/src/main.js",
-    "test": "npm run tsc --noEmit && vitest run",
+    "test": "npm run tsc --noEmit && npm run db:dev && vitest run",
     "tsc": "tsc",
-    "generate": "drizzle-kit generate:pg"
+    "db:dev": "sudo docker-compose up -d && npm run migrate",
+    "migrate": "drizzle-kit push:pg",
+    "generate": "drizzle-kit generate:pg",
+    "db:down": "sudo docker-compose down"
   },
   "dependencies": {
     "drizzle-orm": "^0.29.4",

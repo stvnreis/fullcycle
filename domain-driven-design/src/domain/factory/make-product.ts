@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker'
 import { Product } from 'src/domain/entities/product'
 
 export interface makeProductProps {
@@ -8,8 +9,8 @@ export interface makeProductProps {
 
 export const makeProduct = (override: Partial<makeProductProps> = {}) => {
   return new Product(
-    override.id ?? 'id-1',
-    override.name ?? 'name-1',
-    override.value ?? 20,
+    override.id ?? faker.string.uuid(),
+    override.name ?? faker.commerce.product.name,
+    override.value ?? faker.number.float({ max: 100000.0 }),
   )
 }

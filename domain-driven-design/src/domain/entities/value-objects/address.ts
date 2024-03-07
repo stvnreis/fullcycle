@@ -1,4 +1,5 @@
 export class Address {
+  private _complement?: string | null
   constructor(
     private _country: string,
     private _state: string,
@@ -6,8 +7,9 @@ export class Address {
     private _street: string,
     private _number: number,
     private _cep: string,
-    private _complement?: string,
+    complement?: string,
   ) {
+    this._complement = complement ?? null
     this.validate()
   }
 

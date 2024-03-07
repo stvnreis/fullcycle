@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1709832209446,
+      "tag": "0000_chief_vanisher",
+      "breakpoints": true
+    }
+  ]
+}

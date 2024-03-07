@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker'
 import { Order } from 'src/domain/entities/order'
 import { OrderItem } from 'src/domain/entities/order-item'
 
@@ -9,8 +10,15 @@ interface makeOrderProps {
 
 export const makeOrder = (override: Partial<makeOrderProps> = {}) => {
   return new Order(
-    override.id ?? 'id-1',
-    override.customerId ?? 'customer-1',
-    override.items ?? [new OrderItem('id-1', 'product-1', 20, 5)],
+    override.id ?? faker.string.uuid(),
+    override.customerId ?? faker.string.uuid(),
+    override.items ?? [
+      new OrderItem(
+        faker.string.uuid(),
+        faker.string.uuid(),
+        faker.number.float({ max: 1000.0 }),
+        faker.number.int({ max: 10000 }),
+      ),
+    ],
   )
 }
