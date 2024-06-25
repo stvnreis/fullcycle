@@ -40,7 +40,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
 
     return orders.map((order) => {
 
-      const orderItems = items.filter((item) => item.order_id = order.id)
+      const orderItems = items.filter((item) => item.order_id === order.id)
 
       return this.mapToDomain(order, orderItems)
     })

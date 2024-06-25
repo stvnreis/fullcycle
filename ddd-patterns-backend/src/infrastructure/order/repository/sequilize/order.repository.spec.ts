@@ -157,6 +157,8 @@ describe("Order repository test", () => {
     const entity = await orderRepository.find(order.id)
 
     expect(entity).toMatchObject(order)
+    expect(entity.items).toHaveLength(1)
+    expect(entity.items[0]).toMatchObject(orderItem)
   })
 
   it('should be able to fetch 10 orders', async () => {
@@ -191,5 +193,7 @@ describe("Order repository test", () => {
     const orders = await orderRepository.findAll()
 
     expect(orders).toHaveLength(10)
+    expect(orders[0].items).toHaveLength(1)
+    expect(orders[0].items[0].name).toMatch('Product 1')
   })
 });
